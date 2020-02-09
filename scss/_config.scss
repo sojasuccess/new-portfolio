@@ -1,0 +1,45 @@
+/* COLORS
+WHITES: #FFF
+
+
+BLACKS: #222327
+#222831
+
+
+GRAY: GRAY, #DFE3E6
+
+
+ORANGE-RED: #FF2E63
+
+
+DARK-BLUE: #050A30
+*/
+
+// html {
+//   font-size: 10px;
+// }
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-home-image: true;
+// $home-image: url(/dist//img/kevin-ku-364843-unsplash.jpg);
+$home-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.534),
+    rgba(0, 0, 0, 0.938)
+  ),
+  url(/dist/img/kevin-ku-364843-unsplash.jpg);
+$background-opacity: 0.9;
+
+@mixin easOut {
+  transition: all 0.5s ease-out;
+}
+
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }
+}
