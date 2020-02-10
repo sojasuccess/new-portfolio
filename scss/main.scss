@@ -1,4 +1,7 @@
 @import "config";
+@import "menu";
+@import "mobile";
+
 * {
   box-sizing: border-box;
 }
@@ -6,7 +9,7 @@
 body {
   @include background();
   background: $primary-color;
-  color: white;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   line-height: 1.5;
@@ -20,7 +23,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   &.sm-heading {
@@ -31,7 +34,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 
