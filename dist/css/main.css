@@ -103,39 +103,6 @@ DARK-BLUE: #050A30
   .menu .nav-item:nth-child(4) {
     transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 2rem; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("/dist/img/programmer.jpg");
-      width: 10rem;
-      height: 10rem; } }
-
-@media screen and (max-width: 500px) {
-  main {
-    padding: 2rem; }
-    main #home h1 {
-      margin-top: 10vh; } }
-
 * {
   box-sizing: border-box; }
 
@@ -180,7 +147,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -194,3 +161,159 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    width: 17rem;
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #eece1a 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #eece1a 5px solid; }
+
+.projects {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects .img-card {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 0.5s ease-in-out; }
+    .projects .img-card--title {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      opacity: 0;
+      transition: all 0.5s ease-in-out; }
+      .projects .img-card--title h2 {
+        color: #117;
+        text-align: center; }
+      .projects .img-card--title p {
+        color: #eece1a; }
+    .projects .img-card:hover {
+      background: #fff;
+      background-image: none;
+      transition: all 1s ease-in; }
+    .projects .img-card:hover .img-card--title {
+      opacity: 1;
+      transition: all 0.5s ease-in-out; }
+    .projects .img-card:hover .img-card--description {
+      opacity: 1;
+      transition: all 0.5s ease-in; }
+    .projects .img-card--description {
+      color: #222327;
+      text-align: center;
+      padding: 5rem;
+      opacity: 0;
+      transition: all 0.2s ease-in; }
+    .projects .img-card:hover .infolink {
+      bottom: 2rem;
+      left: 50%;
+      opacity: 1;
+      transform: translate(-50%);
+      transition: all 0.5s ease-in-out; }
+    .projects .img-card .infolink {
+      position: absolute;
+      bottom: -5rem;
+      opacity: 0;
+      transition: all 0.1s ease-in-out; }
+      .projects .img-card .infolink a {
+        border: 2px solid #ff2e62;
+        padding: 1rem 3rem;
+        text-decoration: none;
+        text-align: center;
+        color: #222327;
+        transition: all 0.5s ease-in; }
+        .projects .img-card .infolink a:hover {
+          background-color: #ff2e62;
+          /* border: none; */
+          color: #f1f1f1;
+          transition: all 0.5s ease-in; }
+  .projects .img-card--1 {
+    background-image: url(/dist/img/projectsho3.png); }
+  .projects .img-card--2 {
+    background-image: url(/dist/img/projectsho3.png); }
+  .projects .img-card--3 {
+    background-image: url(/dist/img/projectsho3.png); }
+  .projects .img-card--4 {
+    background-image: url(/dist/img/projectsho3.png); }
+  .projects .img-card--5 {
+    background-image: url(/dist/img/projectsho3.png); }
+  .projects .img-card--6 {
+    background-image: url(/dist/img/projectsho3.png); }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #fff;
+  height: 60px; }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  main {
+    padding: 4rem 0 0 0; }
+  .projects {
+    width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+    padding: 4rem 0 0 0; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 2rem; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("/dist/img/programmer.jpg");
+      width: 10rem;
+      height: 10rem; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 5rem 2rem 0; }
+    main #home h1 {
+      margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
