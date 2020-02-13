@@ -68,6 +68,71 @@
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  // #contact {
+  //   background-color: red;
+  // }
+
+  .contact-container {
+    width: 100%;
+
+    .contact-header {
+      .lg-heading {
+        font-size: 2.9rem;
+        padding: 0;
+      }
+      .sm-heading {
+        padding: 2rem;
+
+        .contact-note {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .footer-social--cover {
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .footer-contact {
+        width: 100%;
+        .contact-form {
+          margin-bottom: 2rem;
+
+          .btn-input {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .footer-social {
+        max-width: unset;
+        width: 72%;
+        padding: 1rem;
+        background-color: inherit;
+
+        & h1 {
+          padding: 0;
+          text-align: justify;
+          font-size: 1.5rem;
+          margin-bottom: 0;
+        }
+        & p {
+          padding: 0;
+          margin-bottom: 2rem;
+          text-align: justify;
+          font-size: 1rem;
+        }
+
+        .social-media {
+          flex-wrap: nowrap;
+          .social__icon--box {
+            height: 6rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Smarty phones
@@ -82,5 +147,63 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  #contact-body main {
+    padding: 0;
+  }
+
+  .contact-container {
+    .contact-header {
+      .lg-heading {
+        font-size: 2.3rem;
+        padding-top: 5rem;
+      }
+      .sm-heading {
+        padding: 1rem;
+        .contact-note {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .footer-social--cover {
+      .footer-contact {
+        width: 100%;
+        .contact-form {
+          .forms {
+            display: block;
+
+            .form-name,
+            .form-email {
+              width: auto;
+              .form-input {
+                width: 80%;
+                margin: 1rem;
+                border-bottom: 0.2rem solid grey;
+                font-size: 1rem;
+              }
+            }
+            & label {
+              top: 0.5rem;
+              font-size: 1rem;
+            }
+          }
+
+          textarea {
+            font-size: 1rem;
+            border-bottom: 0.2rem solid grey;
+          }
+          .btn-input {
+            font-size: 0.8rem;
+            padding: 0.9rem 3rem;
+          }
+        }
+      }
+
+      .footer-social {
+        width: auto;
+      }
+    }
   }
 }
