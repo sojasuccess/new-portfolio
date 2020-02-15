@@ -11,7 +11,9 @@
     height: 3px;
     margin: 0 0 5px 0;
     background: set-text-color($primary-color);
+    background: $secondary-color;
     @include easOut;
+    transition: all 0.3s ease 0s;
   }
 
   &.close {
@@ -23,11 +25,11 @@
       }
 
       &:nth-child(1) {
-        transform: rotate(135deg) translate(10px, 0px);
+        transform: rotate(135deg) translate(10px, 0.4px);
       }
 
       &:nth-child(3) {
-        transform: rotate(-135deg) translate(10px, 2px);
+        transform: rotate(-135deg) translate(10px, 2.2px);
       }
     }
   }
@@ -98,7 +100,6 @@
 
     &.show {
       transform: translate3d(0, 0, 0);
-      transition-delay: 0.6s;
     }
 
     &.current > a {
@@ -123,7 +124,7 @@
   }
 
   // Delay each item
-  @for $x from 1 through 4 {
+  @for $x from 1 through 5 {
     .nav-item:nth-child(#{$x}) {
       transition-delay: $x * 0.1s;
     }

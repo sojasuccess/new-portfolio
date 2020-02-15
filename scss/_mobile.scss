@@ -10,18 +10,27 @@
   .projects {
     width: 100%;
   }
+
+  #skills {
+    .skills {
+      .skill__set p {
+        font-size: unset;
+      }
+    }
+  }
 }
 
 // Tablets and small laptops
 @include mediaMd {
   main {
     align-items: center;
-    text-align: center;
+    text-align: justify;
     padding: 4rem 0 0 0;
 
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
+      font-size: 3rem;
     }
   }
 
@@ -53,6 +62,21 @@
     }
   }
 
+  #skills {
+    .lg-heading {
+      font-size: 4rem;
+    }
+    .sm-heading {
+      font-size: 1.2rem;
+    }
+    .skills {
+      grid-template-columns: repeat(2, 1fr);
+      .skill__set p {
+        font-size: unset;
+      }
+    }
+  }
+
   .about-info {
     grid-template-areas:
       "bioimage"
@@ -62,16 +86,27 @@
       "job3";
 
     grid-template-columns: 1fr;
+    .bio {
+      font-size: 1.3rem;
+      padding: 5rem;
+    }
+
+    .job {
+      margin: 0 auto;
+    }
   }
 
   .projects {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
-  }
 
-  // #contact {
-  //   background-color: red;
-  // }
+    .img-card {
+      .infolink a {
+        color: $white-color;
+        background-color: $secondary-color;
+      }
+    }
+  }
 
   .contact-container {
     width: 100%;
@@ -101,6 +136,9 @@
 
           .btn-input {
             font-size: 1rem;
+          }
+          textarea {
+            margin: 3rem 0;
           }
         }
       }
@@ -137,6 +175,10 @@
 
 // Smarty phones
 @include mediaSm {
+  .menu-btn {
+    right: 0.5rem;
+    top: 0.5rem;
+  }
   main {
     padding: 5rem 2rem 0;
 
@@ -144,9 +186,29 @@
       margin-top: 10vh;
     }
   }
+  .about-info {
+    .bio-image {
+      width: 13rem;
+    }
+  }
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  #skills {
+    .lg-heading {
+      font-size: 3.5rem;
+    }
+    .sm-heading {
+      font-size: 1.1rem;
+    }
+    .skills {
+      grid-template-columns: 1fr;
+      .skill__icon {
+        width: 5rem;
+      }
+    }
   }
 
   #contact-body main {
@@ -156,8 +218,9 @@
   .contact-container {
     .contact-header {
       .lg-heading {
-        font-size: 2.3rem;
+        font-size: 2rem;
         padding-top: 5rem;
+        line-height: 1.2;
       }
       .sm-heading {
         padding: 1rem;
@@ -170,6 +233,7 @@
     .footer-social--cover {
       .footer-contact {
         width: 100%;
+        border-radius: 0;
         .contact-form {
           .forms {
             display: block;
