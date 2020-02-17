@@ -14,6 +14,12 @@ ORANGE-RED: #FF2E63
 
 DARK-BLUE: #050A30
 */
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+    overflow: hidden; } }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -107,14 +113,20 @@ DARK-BLUE: #050A30
     transition-delay: 0.5s; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 body {
   background: #222831;
   color: #fff;
   height: 100%;
   margin: 0;
-  line-height: 1.5; }
+  line-height: 1.5;
+  animation: transitionIn 0.75s; }
   body#bg-img {
     background: linear-gradient(to top left, rgba(0, 0, 0, 0.534), rgba(0, 0, 0, 0.938)), url(/dist/img/kevin-ku-364843-unsplash.jpg);
     background-attachment: fixed;
@@ -162,10 +174,8 @@ main {
         main .icons a .social__icon:hover {
           transform: translateY(-1rem) scale(1.05);
           transition: all 0.5s; }
-  main#home {
-    overflow: hidden; }
-    main#home .home-vh {
-      margin-top: 20vh; }
+  main#home .home-vh {
+    margin-top: 20vh; }
 
 #about main {
   padding: 0; }
@@ -273,6 +283,17 @@ main {
       margin-top: 1rem;
       padding: 1rem; }
 
+#work hr {
+  width: 10%;
+  border: 1px solid #ff2e63;
+  margin-top: -1rem; }
+
+#work main .lg-heading {
+  text-align: center; }
+
+#work main .sm-heading {
+  text-align: center; }
+
 .projects {
   width: 70%;
   margin: 0 auto;
@@ -349,6 +370,11 @@ main {
 
 #my-skills main {
   padding: 0; }
+
+#skills hr {
+  width: 10%;
+  border: 1px solid #ff2e63;
+  margin-top: -1rem; }
 
 #skills .lg-heading {
   text-align: center; }
@@ -518,6 +544,14 @@ main {
   color: #fff;
   height: 60px; }
 
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg); }
+  to {
+    opacity: 1;
+    transform: rotateX(0); } }
+
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   main {
     padding: 4rem 0 0 0; }
@@ -529,7 +563,7 @@ main {
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
-    text-align: justify;
+    text-align: center;
     padding: 4rem 0 0 0; }
     main .lg-heading {
       line-height: 1;
@@ -554,6 +588,8 @@ main {
       background: url("/dist/img/programmer.jpg");
       width: 10rem;
       height: 10rem; }
+  #work main hr {
+    margin-top: -0.1rem; }
   #skills .lg-heading {
     font-size: 4rem; }
   #skills .sm-heading {
@@ -593,7 +629,8 @@ main {
         .contact-container .footer-social--cover .footer-contact .contact-form {
           margin-bottom: 2rem; }
           .contact-container .footer-social--cover .footer-contact .contact-form .btn-input {
-            font-size: 1rem; }
+            font-size: 1rem;
+            padding: 1.2rem 3.5rem; }
           .contact-container .footer-social--cover .footer-contact .contact-form textarea {
             margin: 3rem 0; }
       .contact-container .footer-social--cover .footer-social {
@@ -617,6 +654,8 @@ main {
             height: 6rem; } }
 
 @media screen and (max-width: 500px) {
+  html {
+    font-size: 85%; }
   .menu-btn {
     right: 0.5rem;
     top: 0.5rem; }
@@ -668,6 +707,8 @@ main {
       border-bottom: 0.2rem solid grey; }
     .contact-container .footer-social--cover .footer-contact .contact-form .btn-input {
       font-size: 0.8rem;
-      padding: 0.9rem 3rem; }
+      padding: 0.9rem 2.5rem; }
   .contact-container .footer-social--cover .footer-social {
-    width: auto; } }
+    width: auto; }
+    .contact-container .footer-social--cover .footer-social .social-media .social__icon:last-of-type {
+      fill: #6e5494; } }

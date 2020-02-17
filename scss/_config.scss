@@ -80,3 +80,19 @@ $background-opacity: 0.9;
     @content;
   }
 }
+
+// Locks screen orientation on mobile landscape mode
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  // html {
+  //   font-size: 60%;
+  // }
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+    overflow: hidden;
+  }
+}
+
+// Detect devices with touch screen and without
+@media (pointer: coarse) {
+}

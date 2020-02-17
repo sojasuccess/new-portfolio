@@ -1,3 +1,8 @@
+// Prevent right clicking
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+}, false);
+
 // DOM SELECTIONS
 const
   menuBtn = document.querySelector('.menu-btn'),
