@@ -368,6 +368,10 @@ main {
   .projects .img-card--6 {
     background-image: url(/dist/img/game.png); }
 
+#my-skills .menu-btn {
+  top: 1.5rem;
+  right: 1.5rem; }
+
 #my-skills main {
   padding: 0; }
 
@@ -394,7 +398,7 @@ main {
   #skills .skills .skill__set {
     padding: 3rem;
     border-radius: 5px;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12); }
     #skills .skills .skill__set h2 {
       font-size: 2rem;
       color: #222327; }
@@ -628,11 +632,11 @@ main {
         width: 100%; }
         .contact-container .footer-social--cover .footer-contact .contact-form {
           margin-bottom: 2rem; }
+          .contact-container .footer-social--cover .footer-contact .contact-form .forms .form-input {
+            width: 80%; }
           .contact-container .footer-social--cover .footer-contact .contact-form .btn-input {
             font-size: 1rem;
             padding: 1.2rem 3.5rem; }
-          .contact-container .footer-social--cover .footer-contact .contact-form textarea {
-            margin: 3rem 0; }
       .contact-container .footer-social--cover .footer-social {
         max-width: unset;
         width: 72%;
@@ -656,15 +660,19 @@ main {
 @media screen and (max-width: 500px) {
   html {
     font-size: 85%; }
-  .menu-btn {
-    right: 0.5rem;
-    top: 0.5rem; }
   main {
     padding: 5rem 2rem 0; }
     main #home h1 {
       margin-top: 10vh; }
-  .about-info .bio-image {
+  #about .menu-btn {
+    top: 1.5rem;
+    right: 1.5rem; }
+  #about .about-info .bio {
+    padding: 1rem; }
+  #about .about-info .bio-image {
     width: 13rem; }
+  #about .about-info .services h1 {
+    font-size: 2rem; }
   .projects {
     grid-template-columns: 1fr; }
   #skills .lg-heading {
@@ -675,7 +683,7 @@ main {
     grid-template-columns: 1fr; }
     #skills .skills .skill__icon {
       width: 5rem; }
-  #contact-body main {
+  #contact main {
     padding: 0; }
   .contact-container .contact-header .lg-heading {
     font-size: 2rem;

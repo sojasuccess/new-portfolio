@@ -141,13 +141,15 @@
         width: 100%;
         .contact-form {
           margin-bottom: 2rem;
+          .forms {
+            .form-input {
+              width: 80%;
+            }
+          }
 
           .btn-input {
             font-size: 1rem;
             padding: 1.2rem 3.5rem;
-          }
-          textarea {
-            margin: 3rem 0;
           }
         }
       }
@@ -187,10 +189,7 @@
   html {
     font-size: 85%;
   }
-  .menu-btn {
-    right: 0.5rem;
-    top: 0.5rem;
-  }
+
   main {
     padding: 5rem 2rem 0;
 
@@ -198,9 +197,21 @@
       margin-top: 10vh;
     }
   }
-  .about-info {
-    .bio-image {
-      width: 13rem;
+  #about {
+    .menu-btn {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+    .about-info {
+      .bio {
+        padding: 1rem;
+      }
+      .bio-image {
+        width: 13rem;
+      }
+      .services h1 {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -223,8 +234,10 @@
     }
   }
 
-  #contact-body main {
-    padding: 0;
+  #contact {
+    main {
+      padding: 0;
+    }
   }
 
   .contact-container {
