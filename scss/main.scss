@@ -153,9 +153,11 @@ main {
     perspective: 120rem;
     // height: 50rem;
 
+    &:active,
     &:hover .card__side--front {
       transform: rotateY(-180deg);
     }
+    &:active,
     &:hover .card__side--back {
       transform: rotateY(0);
     }
