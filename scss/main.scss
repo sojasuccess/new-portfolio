@@ -303,15 +303,18 @@ main {
       }
     }
 
+    &:active,
     &:hover {
       background: #fff;
       background-image: none;
       transition: all 1s ease-in;
     }
+    &:active,
     &:hover .img-card--title {
       opacity: 1;
       transition: all 0.5s ease-in-out;
     }
+    &:active,
     &:hover .img-card--description {
       opacity: 1;
       transition: all 0.5s ease-in;
@@ -327,6 +330,7 @@ main {
       transition: all 0.2s ease-in;
     }
 
+    &:active,
     &:hover .infolink {
       bottom: 2rem;
       left: 50%;
