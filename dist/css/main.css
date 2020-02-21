@@ -14,7 +14,7 @@ ORANGE-RED: #FF2E63
 
 DARK-BLUE: #050A30
 */
-@media (orientation: portrait) {
+@media (orientation: landscape) {
   body {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
