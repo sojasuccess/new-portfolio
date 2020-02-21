@@ -336,7 +336,9 @@ main {
       padding: 5rem;
       opacity: 0;
       transition: all 0.2s ease-in; }
-    .projects .img-card:active,
+    .projects .img-card:active {
+      opacity: 1;
+      transition: all 0.5s ease-in-out; }
     .projects .img-card:hover .infolink {
       bottom: 2rem;
       left: 50%;
