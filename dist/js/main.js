@@ -36,3 +36,13 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+// Alert when projects try open with mobile devices
+const projectBtn = document.querySelectorAll('.infolink');
+projectBtn.forEach(btn => btn.addEventListener('click', notCool));
+function notCool() {
+  const isMobile = /iPhone|iPod|Andriod/i.test(Navigator.userAgent);
+  if (isMobile) {
+    alert('use desktop')
+  }
+}
