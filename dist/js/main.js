@@ -43,7 +43,7 @@ projectBtn.forEach(btn => btn.addEventListener('click', notCool));
 function notCool() {
   const isMobile = /iPhone|iPod|Andriod/i.test(navigator.userAgent);
   if (isMobile) {
-    alert('use desktop')
+    alert('this is desktop widget, open with desktop')
     return false;
   }
   // alert("infolingk clicked")

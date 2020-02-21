@@ -82,13 +82,21 @@ $background-opacity: 0.9;
 }
 
 // Locks screen orientation on mobile landscape mode
-@media screen and (max-width: 640px) and (orientation: landscape) {
-  // html {
-  //   font-size: 60%;
-  // }
+// @media screen and (max-width: 640px) and (orientation: landscape) {
+
+//   body {
+//     height: 100vw;
+//     transform: rotate(90deg);
+//     overflow: hidden;
+//   }
+// }
+
+@media (orientation: portrait) {
   body {
-    height: 100vw;
-    transform: rotate(90deg);
-    overflow: hidden;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
   }
 }
