@@ -47,4 +47,8 @@ function notCool() {
     return false;
   }
   // alert("infolingk clicked")
-}
+};
+
+screen.orientation.lock("portrait");
+screen.msLockOrientation.lock("portrait-primary");
+screen.mozLockOrientation.lock("portrait-primary");

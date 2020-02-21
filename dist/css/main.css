@@ -14,14 +14,6 @@ ORANGE-RED: #FF2E63
 
 DARK-BLUE: #050A30
 */
-@media (orientation: landscape) {
-  body {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg); } }
-
 .menu-btn {
   position: absolute;
   z-index: 3;
