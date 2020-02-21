@@ -44,7 +44,7 @@ function notCool() {
   const isMobile = /iPhone|iPod|Andriod/i.test(navigator.userAgent);
   if (isMobile) {
     alert('use desktop')
-    return;
+    return false;
   }
   // alert("infolingk clicked")
 }
