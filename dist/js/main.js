@@ -52,5 +52,3 @@ function notCool() {
 // screen.orientation.lock("portrait");
 // screen.msLockOrientation.lock("portrait-primary");
 // screen.mozLockOrientation.lock("portrait-primary");
-
-window.screen.orientation.lock('portrait')
