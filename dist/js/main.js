@@ -49,6 +49,6 @@ function notCool() {
   // alert("infolingk clicked")
 };
 
-screen.orientation.lock("portrait");
-screen.msLockOrientation.lock("portrait-primary");
-screen.mozLockOrientation.lock("portrait-primary");
+// screen.orientation.lock("portrait");
+// screen.msLockOrientation.lock("portrait-primary");
+// screen.mozLockOrientation.lock("portrait-primary");
