@@ -38,17 +38,14 @@ function toggleMenu() {
 }
 
 // Alert when projects try open with mobile devices
-const projectBtn = document.querySelectorAll('.infolink');
+const projectBtn = document.querySelectorAll('.indesktop');
 projectBtn.forEach(btn => btn.addEventListener('click', notCool));
 function notCool() {
   const isMobile = /iPhone|iPod|Andriod/i.test(navigator.userAgent);
   if (isMobile) {
-    alert('this is desktop widget, open with desktop')
-    return false;
+    alert('Optimize for desktop! Open with desktop')
+    return;
   }
   // alert("infolingk clicked")
 };
 
-// screen.orientation.lock("portrait");
-// screen.msLockOrientation.lock("portrait-primary");
-// screen.mozLockOrientation.lock("portrait-primary");
