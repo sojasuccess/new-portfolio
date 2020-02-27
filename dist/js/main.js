@@ -40,11 +40,12 @@ function toggleMenu() {
 // Alert when projects try open with mobile devices
 const projectBtn = document.querySelectorAll('.indesktop');
 projectBtn.forEach(btn => btn.addEventListener('click', notCool));
-function notCool() {
+function notCool(e) {
   const isMobile = /iPhone|iPod|Andriod/i.test(navigator.userAgent);
   if (isMobile) {
     alert('Optimize for desktop! Open with desktop');
-    return false;
+    // return false;
+    e.preventDefault();
   }
   // alert("infolingk clicked")
 };
