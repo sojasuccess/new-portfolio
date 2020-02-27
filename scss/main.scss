@@ -9,6 +9,14 @@
   -ms-user-select: none;
   user-select: none;
 }
+input,
+textarea {
+  -webkit-user-select: text;
+  -webkit-touch-callout: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
 // html {
 //   font-size: 62.5%;
 // }
@@ -529,6 +537,7 @@ main {
             font-family: "Playfair Display";
             font-size: 1.8rem;
             color: white;
+            -webkit-text-fill-color: white;
           }
           & label {
             position: absolute;
@@ -555,6 +564,7 @@ main {
           text-transform: capitalize;
           margin: 8rem 2rem;
           transition: 0.5s;
+          color: white;
 
           &:focus {
             outline: none;
@@ -630,6 +640,10 @@ main {
           width: 50%;
           height: 50%;
           transition: all 0.3s;
+
+          &:last-child {
+            fill: #6e5494;
+          }
 
           &:hover {
             transform: translateY(-1rem) scale(1.05);

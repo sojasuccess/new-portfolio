@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /* COLORS
 WHITES: #FFF
 
@@ -187,6 +189,15 @@ DARK-BLUE: #050A30
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+input,
+textarea {
+  -webkit-user-select: text;
+  -webkit-touch-callout: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 body {
@@ -764,6 +775,7 @@ main#home .home-vh {
   font-family: "Playfair Display";
   font-size: 1.8rem;
   color: white;
+  -webkit-text-fill-color: white;
 }
 .contact-container
   .footer-social--cover
@@ -799,6 +811,7 @@ main#home .home-vh {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  color: white;
 }
 .contact-container
   .footer-social--cover
@@ -905,6 +918,13 @@ main#home .home-vh {
   .footer-social--cover
   .footer-social
   .social-media
+  .social__icon:last-child {
+  fill: #6e5494;
+}
+.contact-container
+  .footer-social--cover
+  .footer-social
+  .social-media
   .social__icon:hover {
   -webkit-transform: translateY(-1rem) scale(1.05);
   -ms-transform: translateY(-1rem) scale(1.05);
@@ -954,6 +974,9 @@ main#home .home-vh {
   }
   #skills .skills .skill__set p {
     font-size: unset;
+  }
+  .contact-container {
+    width: auto;
   }
 }
 
@@ -1032,6 +1055,7 @@ main#home .home-vh {
   .projects {
     width: 100%;
     -ms-grid-columns: repeat(2, 1fr);
+
     grid-template-columns: repeat(2, 1fr);
   }
   .projects .img-card .infolink a {
