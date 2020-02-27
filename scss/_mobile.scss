@@ -186,6 +186,9 @@
 
 // Smarty phones
 @include mediaSm {
+  body {
+    @include background-mobile();
+  }
   html {
     font-size: 85%;
   }
@@ -202,7 +205,26 @@
       top: 1.5rem;
       right: 1.5rem;
     }
+
     .about-info {
+      .job-1 {
+        .card__img--1 {
+          background-image: url(/dist/img/mobile/web-dev-img-400.jpg);
+        }
+      }
+
+      .job-2 {
+        .card__img--2 {
+          background-image: url(/dist/img/mobile/web-design-img-400.jpg);
+        }
+      }
+
+      .job-3 {
+        .card__img--3 {
+          background-image: url(/dist/img/mobile/web-miantenance-img-400.jpg);
+        }
+      }
+
       .bio {
         padding: 1rem;
       }
@@ -217,6 +239,25 @@
 
   .projects {
     grid-template-columns: 1fr;
+
+    .img-card--1 {
+      background-image: url(/dist/img/mobile/weather-400.png);
+    }
+    .img-card--2 {
+      background-image: url(/dist/img/mobile/wallpaper-400.png);
+    }
+    .img-card--3 {
+      background-image: url(/dist/img/mobile/budgetapp-400.png);
+    }
+    .img-card--4 {
+      background-image: url(/dist/img/mobile/booking-400.png);
+    }
+    .img-card--5 {
+      background-image: url(/dist/img/mobile/travel-400.png);
+    }
+    .img-card--6 {
+      background-image: url(/dist/img/mobile/game-400.png);
+    }
   }
 
   #skills {

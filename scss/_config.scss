@@ -30,12 +30,8 @@ $home-image: linear-gradient(
     rgba(0, 0, 0, 0.534),
     rgba(0, 0, 0, 0.938)
   ),
-  url(/dist/img/kevin-ku-364843-unsplash.jpg);
+  url(/dist/img/bgc.jpg);
 $background-opacity: 0.9;
-
-@mixin easOut {
-  transition: all 0.5s ease-out;
-}
 
 @mixin background {
   @if $show-home-image {
@@ -45,6 +41,28 @@ $background-opacity: 0.9;
       background-size: cover;
     }
   }
+}
+
+$mobile-bg: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.534),
+    rgba(0, 0, 0, 0.938)
+  ),
+  url(/dist/img/mobile/bgc-600.jpg);
+$background-opacity: 0.9;
+
+@mixin background-mobile {
+  @if $mobile-bg {
+    &#bg-img {
+      background: $mobile-bg;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }
+}
+
+@mixin easOut {
+  transition: all 0.5s ease-out;
 }
 
 // Set Text Color
