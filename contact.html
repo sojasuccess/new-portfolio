@@ -70,8 +70,8 @@
             <form
               id="contact-form"
               class="contact-form"
-              action=""
-              method="POST"
+              action="POST"
+              data-netlify="true"
             >
               <div class="forms">
                 <div class="form-name">
@@ -105,6 +105,7 @@
                 placeholder="leave a message"
                 required
               ></textarea>
+              <div data-netlify-recaptcha="true"></div>
               <input type="submit" value="submit" class="btn-input" />
             </form>
           </div>
